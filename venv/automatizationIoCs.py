@@ -41,7 +41,7 @@ urlText = document.add_paragraph("", style="List Bullet 2")
 urlText.add_run("URLs").bold = True
 
 urlCounter = 1
-for url in lst_url[0:10]:
+for url in lst_url:
     objUrlDomain = dm.domain(url)
     print(objUrlDomain.urlToDict())
     document.add_paragraph("\t" + str(urlCounter) + ". " + objUrlDomain.url)
@@ -175,4 +175,4 @@ addToResumen(d, "Reputación Web Desconocida: ", str(unknownWebRep), "List Bulle
 addToResumen(d, "Cantidad de HASHES: ", str(numOfHASHES), "List Bullet 2")
 addToResumen(d, "No detectado por ninguno de los 4 antivirus: ", str(undetectedHASHES), "List Bullet 3")
 
-document.save('demo.docx')
+document.save('Reporte.docx')
